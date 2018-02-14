@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+//Eerst alles laten zien
+document.getElementById("Lresult").innerHTML = "Lisa heeft " + localStorage.Lclickcount + " fout(en).";
+
+document.getElementById("Wresult").innerHTML = "Willy heeft " + localStorage.Wclickcount + " fout(en).";
+
+document.getElementById("Dresult").innerHTML = "Daniel heeft " + localStorage.Dclickcount + " fout(en).";
+
+//De Daniel click teller
+function Dclickcounter() {
+    if(typeof(Storage) !== "undefined") {
+        if (localStorage.Dclickcount) {
+            localStorage.Dclickcount = Number(localStorage.Dclickcount)+1;
+        } else {
+            localStorage.Dclickcount = 1;
+        }
+        document.getElementById("Dresult").innerHTML = "Daniel heeft " + localStorage.Dclickcount + " fout(en).";
+    } else {
+      alert("Sorry! Het lijkt erop dat je browser geen 'localStorage' ondersteunt.");
+    }
+}
+
+//De Willy click teller
+function Wclickcounter() {
+    if(typeof(Storage) !== "undefined") {
+        if (localStorage.Wclickcount) {
+            localStorage.Wclickcount = Number(localStorage.Wclickcount)+1;
+        } else {
+            localStorage.Wclickcount = 1;
+        }
+        document.getElementById("Wresult").innerHTML = "Willy heeft " + localStorage.Wclickcount + " fout(en).";
+    } else {
+        alert("Sorry! Het lijkt erop dat je browser geen 'localStorage' ondersteunt.");
+    }
+}
+
+//De Lisa click teller
+function Lclickcounter() {
+    if(typeof(Storage) !== "undefined") {
+        if (localStorage.Lclickcount) {
+            localStorage.Lclickcount = Number(localStorage.Lclickcount)+1;
+        } else {
+            localStorage.Lclickcount = 1;
+        }
+        document.getElementById("Lresult").innerHTML = "Lisa heeft " + localStorage.Lclickcount + " fout(en).";
+    } else {
+        alert("Sorry! Het lijkt erop dat je browser geen 'localStorage' ondersteunt.");
+    }
+}
+
+//Alles weghalen
+function weghalen(){
+  localStorage.setItem("Dclickcount", 0);
+  localStorage.setItem("Wclickcount", 0);
+  localStorage.setItem("Lclickcount", 0);
+location.reload()
+}
+</script>
+</head>
+<body>
+<p><button onclick="Dclickcounter()" type="button">Fout toevoegen aan Daniel</button></p>
+<div id="Dresult"></div>
+<p><button onclick="Wclickcounter()" type="button">Fout toevoegen aan Willy</button></p>
+<div id="Wresult"></div>
+<p><button onclick="Lclickcounter()" type="button">Fout toevoegen aan Lisa</button></p>
+<div id="Lresult"></div>
+<p><button onclick="weghalen()"type="button">Klik hier om alles weg te halen!</button></p>
+</body>
+</html>
