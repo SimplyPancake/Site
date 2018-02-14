@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <div class="rectangleRed">
+    <div class="wrapper">
+        <button class="buttonRed" onclick="cycleQuestions()">Choose option Red</button>
+        <br><br><br><br><br><br>
+        <!-- Ik heb even geen idee hoe ik die tekst in het midden krijg :/ -->
+        <a class="rodeVraagCSS" id="redTekst">Which one to choose?</a>
+    </div>
+  </div>
+
+  <div class="rectangleBlue">
+    <div class="wrapper">
+      <button class="buttonBlue" onclick="cycleQuestions()">Choose option Blue</button>
+      <br><br><br><br><br><br>
+      <!-- Ik heb even geen idee hoe ik die tekst in het midden krijg :/ -->
+      <a class="blauweVraagCSS" id="blueTekst">Which one to choose?</a>
+    </div>
+  </div>
+<body>
+</html>
+
+<script>
+var rodeVraag;
+var blauweVraag;
+var count = 0;
+var aantalVragen = 6;
+var laatsteVraag = 0;
+var vragen = [];
+var cVragen = [];
+//Nu is het systeem zo dat één vraag altijd correspondeert met een ander
+//Het systeem kan ook zo zijn dat je heel erg gelijke vragen hebt, en dat er random wordt geselecteerd
+vragen[1] = "Always be 10 minutes late";
+cVragen[vragen[1]] = "Always be 20 minutes early"
+vragen[2] = "Lose all of your money and valuables";
+cVragen[vragen[2]] = "Lose all the pictures you have ever taken";
+vragen[3] = "Be able to see 10 minutes into your own future";
+cVragen[vragen[3]] = "Be able to see 10 minutes of the future of anyone but yourself";
+vragen[4] = "Go to jail for something you didn't do";
+cVragen[vragen[4]] = "Get away with something horrible but live in fear of being caught";
+vragen[5] = "Be responsible for the death of a child";
+cVragen[vragen[5]] = "Be responsible for the death of 3 adults"
+vragen[6] = "Never use social media sites/apps again"
+cVragen[vragen[6]] = "Never watch a TV show or movie ever again"
+
+
+function cycleQuestions(){
+vragenPower = Math.floor((Math.random() * aantalVragen) + 1);
+// maakt een random nummer aan dat kan rijken van 1 tot het maximaal aantal vragen (zie het variabel aantalVragen).
+document.getElementById("redTekst").innerHTML = vragen[vragenPower];
+var vragenBetekenis = vragen[vragenPower];
+document.getElementById("blueTekst").innerHTML = cVragen[vragenBetekenis];
+}
+
+</script>
+
+<style>
+html,body{
+    height: 100%;
+}
+.rectangleRed {
+  height: 50%;
+  width: 100%;
+  background: #ff6666;
+}
+
+.rectangleBlue {
+  height: 50%;
+  width: 100%;
+  background: #33ccff;
+}
+
+.rodeVraagCSS {
+  height: 25%;
+  width: 50%;
+  color: #ffffff;
+  font-family:Courier New;
+	font-size:16px;
+	font-weight:bold;
+	font-style:italic;
+	text-shadow:3px 4px 2px #b23e35;
+}
+
+.blauweVraagCSS {
+  height: 25%;
+  width: 50%;
+  color: #ffffff;
+  font-family:Courier New;
+	font-size:16px;
+	font-weight:bold;
+	font-style:italic;
+	text-shadow:3px 4px 2px #0000ff;
+}
+
+.wrapper {
+    text-align: center;
+}
+
+.buttonRed {
+  width:50%;
+	-moz-box-shadow:inset 0px 39px 0px -24px #e67a73;
+	-webkit-box-shadow:inset 0px 39px 0px -24px #e67a73;
+	box-shadow:inset 0px 39px 0px -24px #e67a73;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #e4685d), color-stop(1, #eb675e));
+	background:-moz-linear-gradient(top, #e4685d 5%, #eb675e 100%);
+	background:-webkit-linear-gradient(top, #e4685d 5%, #eb675e 100%);
+	background:-o-linear-gradient(top, #e4685d 5%, #eb675e 100%);
+	background:-ms-linear-gradient(top, #e4685d 5%, #eb675e 100%);
+	background:linear-gradient(to bottom, #e4685d 5%, #eb675e 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#e4685d', endColorstr='#eb675e',GradientType=0);
+	background-color:#e4685d;
+	-moz-border-radius:42px;
+	-webkit-border-radius:42px;
+	border-radius:42px;
+	border:2px solid #ffffff;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Courier New;
+	font-size:16px;
+	font-weight:bold;
+	font-style:italic;
+	padding:5px 76px;
+	text-decoration:none;
+	text-shadow:3px 4px 2px #b23e35;
+}
+
+.buttonBlue {
+  height:60%;
+  width:50%;
+	-moz-box-shadow:inset 0px 39px 0px -24px #33ccff;
+	-webkit-box-shadow:inset 0px 39px 0px -24px #33ccff;
+	box-shadow:inset 0px 39px 0px -24px #33ccff;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #33ccff), color-stop(1, #33ccff));
+	background:-moz-linear-gradient(top, #33ccff 5%, #33ccff 100%);
+	background:-webkit-linear-gradient(top, #33ccff 5%, #33ccff 100%);
+	background:-o-linear-gradient(top, #33ccff 5%, #33ccff 100%);
+	background:-ms-linear-gradient(top, #33ccff 5%, #33ccff 100%);
+	background:linear-gradient(to bottom, #33ccff 5%, #33ccff 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#33ccff', endColorstr='#33ccff',GradientType=0);
+	background-color:#33ccff;
+	-moz-border-radius:42px;
+	-webkit-border-radius:42px;
+	border-radius:42px;
+	border:2px solid #ffffff;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Courier New;
+	font-size:16px;
+	font-weight:bold;
+	font-style:italic;
+	padding:5px 76px;
+	text-decoration:none;
+	text-shadow:3px 4px 2px #0000ff;
+}
