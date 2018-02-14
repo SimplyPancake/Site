@@ -1,0 +1,75 @@
+<html>
+<center>
+<button class = "myButton", onclick="changePic()">HeYO KidDOS!111!</button><br>
+<img id = "plaatje" src = "http://ghk.h-cdn.co/assets/cm/15/12/5508dcded67d8-healthy-childhood-nutrition-s3.jpg"></img><br>
+<button class = "myButton", onclick="changePic()">HeYO KidDOS!111!</button>
+</center>
+</html>
+
+<script>
+var maximaalPlaatjes = 10;
+var plaatjesAantal;
+var plaatjes = [];
+plaatjes[1] = "http://ak8.picdn.net/shutterstock/videos/7458508/thumb/10.jpg";
+plaatjes[2] = "https://s3-us-west-2.amazonaws.com/beachbody-blog/uploads/2017/04/Beachbody-blog-kids-eat-healthy.jpg";
+plaatjes[3] = "https://www.thebeaverton.com/wp-content/uploads/2017/07/Boy-kid-child-apple-biting-800x600.jpg";
+plaatjes[4] = "https://www.healthunit.com/uploads/img/child-eating-apple.gif";
+plaatjes[5] = "http://i.dailymail.co.uk/i/pix/2012/11/14/article-2232925-0285DE0C0000044D-435_468x523.jpg";
+plaatjes[6] = "http://www.thefashionablehousewife.com/wp-content/uploads/2017/03/toddler-eating-healthy-apple-fruit-1.jpg";
+plaatjes[7] = "http://ak1.picdn.net/shutterstock/videos/18441871/thumb/1.jpg";
+plaatjes[8] = "http://i.huffpost.com/gen/1221622/images/o-KID-EATING-APPLE-facebook.jpg";
+plaatjes[9] = "https://www.arcticapples.com/wp-content/uploads/2015/07/CB107281.jpg";
+plaatjes[10] = "https://st2.depositphotos.com/3584053/9939/i/950/depositphotos_99393978-stock-photo-portrait-of-kid-eating-apple.jpg";
+function changePic(){
+//plaatjesAantal = Math.ceil(Math.random() * 10);
+plaatjesAantal = Math.floor((Math.random() * maximaalPlaatjes) + 1);
+if(plaatjesAantal > maximaalPlaatjes){
+  plaatjesAantal = maximaalPlaatjes;
+}
+document.getElementById("plaatje").src = plaatjes[plaatjesAantal];
+}
+</script>
+
+<style>
+.myButton {
+	-moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
+	box-shadow:inset 0px 1px 0px 0px #ffffff;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #f9f9f9), color-stop(1, #e9e9e9));
+	background:-moz-linear-gradient(top, #f9f9f9 5%, #e9e9e9 100%);
+	background:-webkit-linear-gradient(top, #f9f9f9 5%, #e9e9e9 100%);
+	background:-o-linear-gradient(top, #f9f9f9 5%, #e9e9e9 100%);
+	background:-ms-linear-gradient(top, #f9f9f9 5%, #e9e9e9 100%);
+	background:linear-gradient(to bottom, #f9f9f9 5%, #e9e9e9 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f9f9f9', endColorstr='#e9e9e9',GradientType=0);
+	background-color:#f9f9f9;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:1px solid #dcdcdc;
+	display:inline-block;
+	cursor:pointer;
+	color:#666666;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ffffff;
+}
+.myButton:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #e9e9e9), color-stop(1, #f9f9f9));
+	background:-moz-linear-gradient(top, #e9e9e9 5%, #f9f9f9 100%);
+	background:-webkit-linear-gradient(top, #e9e9e9 5%, #f9f9f9 100%);
+	background:-o-linear-gradient(top, #e9e9e9 5%, #f9f9f9 100%);
+	background:-ms-linear-gradient(top, #e9e9e9 5%, #f9f9f9 100%);
+	background:linear-gradient(to bottom, #e9e9e9 5%, #f9f9f9 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#e9e9e9', endColorstr='#f9f9f9',GradientType=0);
+	background-color:#e9e9e9;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+</style>
