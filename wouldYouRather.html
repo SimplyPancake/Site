@@ -17,7 +17,7 @@
       <a class="rodeVraagCSS" id="redTekst">Which one to choose?</a>
     </div>
   </div>
-  <div class="rectangleBlue" onclick="cycleQuestions(); blueClickAdd();">
+  <div class="rectangleBlue" onclick="cycleQuestions()">
     <div class="wrapper">
       <!-- <button class="buttonBlue" onclick="cycleQuestions()">Choose option Blue</button> -->
       <br><br><br><br><br><br>
@@ -106,6 +106,8 @@
       //Als de vraag not niet is gesteld, stel dan een vraag
       document.getElementById("redTekst").innerHTML = cVragen[cVragenArray]
       document.getElementById("blueTekst").innerHTML = cVragenAntwoord[cVragenArray]
+      // localStorage.lastname = "Smith";
+      localStorage.setItem("lastname", "Smith");
     }
   }
 </script>
