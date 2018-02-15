@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html>
 <body>
-  <div class="rectangleRed">
+  <div class="rectangleRed" onclick="cycleQuestions()">
     <div class="wrapper">
-        <button class="buttonRed" onclick="cycleQuestions()">Choose option Red</button>
+        <!-- <button class="buttonRed" onclick="cycleQuestions()">Choose option Red</button> -->
         <br><br><br><br><br><br>
         <!-- Ik heb even geen idee hoe ik die tekst in het midden krijg :/ -->
         <a class="rodeVraagCSS" id="redTekst">Which one to choose?</a>
     </div>
   </div>
 
-  <div class="rectangleBlue">
+  <div class="rectangleBlue" onclick="cycleQuestions()">
     <div class="wrapper">
-      <button class="buttonBlue" onclick="cycleQuestions()">Choose option Blue</button>
+      <!-- <button class="buttonBlue" onclick="cycleQuestions()">Choose option Blue</button> -->
       <br><br><br><br><br><br>
       <!-- Ik heb even geen idee hoe ik die tekst in het midden krijg :/ -->
       <a class="blauweVraagCSS" id="blueTekst">Which one to choose?</a>
@@ -29,30 +29,47 @@ var aantalVragen = 6;
 var laatsteVraag = 0;
 var vragen = [];
 var cVragen = [];
-//Nu is het systeem zo dat één vraag altijd correspondeert met een ander
-//Het systeem kan ook zo zijn dat je heel erg gelijke vragen hebt, en dat er random wordt geselecteerd
-vragen[1] = "Always be 10 minutes late";
-cVragen[vragen[1]] = "Always be 20 minutes early"
-vragen[2] = "Lose all of your money and valuables";
-cVragen[vragen[2]] = "Lose all the pictures you have ever taken";
-vragen[3] = "Be able to see 10 minutes into your own future";
-cVragen[vragen[3]] = "Be able to see 10 minutes of the future of anyone but yourself";
-vragen[4] = "Go to jail for something you didn't do";
-cVragen[vragen[4]] = "Get away with something horrible but live in fear of being caught";
-vragen[5] = "Be responsible for the death of a child";
-cVragen[vragen[5]] = "Be responsible for the death of 3 adults"
-vragen[6] = "Never use social media sites/apps again"
-cVragen[vragen[6]] = "Never watch a TV show or movie ever again"
+var genresArray;
+// genre 1 = "Rather be advantage with disadvantage or rather be disadvantage with advantage";
+// genre 2 = "Rather have a sister(een) or a brother(ander)";
+var voordeelArray;
+var voordeel = [];
+var aantalVoordeel = 4;
+voordeel[1] = "have anything transform to gold when you want"
+voordeel[2] = "be able to do anything you want"
+voordeel[3] = "know all the things of the world"
+voordeel[4] = "be able to decide the fate of life and death of anyone"
+voordeel[5] = "be able to see into your own future"
 
+var nadeelArray;
+var nadeel = [];
+var aantalNadeel = 3;
+nadeel[1] = "never live in a house ever again"
+nadeel[2] = "die at the age of 30"
+nadeel[3] = "never be able to share secrets with anyone"
+nadeel[4] = "lose the person you care about most"
+nadeel[5] = "be responsible for the death of a child"
+nadeel[6] = "never watch a TV show or movie ever again"
+nadeel[7] = "go to jail for something you didnt do"
+nadeel[8] = "always be 20 minutes late"
 
 function cycleQuestions(){
-vragenPower = Math.floor((Math.random() * aantalVragen) + 1);
-// maakt een random nummer aan dat kan rijken van 1 tot het maximaal aantal vragen (zie het variabel aantalVragen).
-document.getElementById("redTekst").innerHTML = vragen[vragenPower];
-var vragenBetekenis = vragen[vragenPower];
-document.getElementById("blueTekst").innerHTML = cVragen[vragenBetekenis];
+// genresArray = Math.floor((Math.random() * 3) + 1);
+genresArray = 2;
+//randomize een nummer van 1 tot en met 3 tot het variabel genresArray
+if (genresArray == 1) {
+  //Als genresArray hetzelfde is als 1, doe dit script
 }
-
+if (genresArray == 2) {
+  //Als genresArray hetzelfde is als 2, doe dit script
+  voordeelArray = Math.floor((Math.random() * aantalVoordeel) + 1);
+  nadeelArray = Math.floor((Math.random() * aantalNadeel) + 1);
+  document.getElementById("redTekst").innerHTML = "Rather " + voordeel[voordeelArray] + ", but " + nadeel[nadeelArray];
+  voordeelArray = Math.floor((Math.random() * aantalVoordeel) + 1);
+  nadeelArray = Math.floor((Math.random() * aantalNadeel) + 1);
+  document.getElementById("blueTekst").innerHTML = "Rather " + voordeel[voordeelArray] + ", but " + nadeel[nadeelArray];
+  }
+}
 </script>
 
 <style>
@@ -63,12 +80,14 @@ html,body{
   height: 50%;
   width: 100%;
   background: #ff6666;
+  cursor: pointer;
 }
 
 .rectangleBlue {
   height: 50%;
   width: 100%;
   background: #33ccff;
+  cursor: pointer;
 }
 
 .rodeVraagCSS {
@@ -76,10 +95,16 @@ html,body{
   width: 50%;
   color: #ffffff;
   font-family:Courier New;
-	font-size:16px;
+	font-size:18px;
 	font-weight:bold;
 	font-style:italic;
 	text-shadow:3px 4px 2px #b23e35;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .blauweVraagCSS {
@@ -87,10 +112,16 @@ html,body{
   width: 50%;
   color: #ffffff;
   font-family:Courier New;
-	font-size:16px;
+	font-size:18px;
 	font-weight:bold;
 	font-style:italic;
 	text-shadow:3px 4px 2px #0000ff;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .wrapper {
@@ -99,9 +130,9 @@ html,body{
 
 .buttonRed {
   width:50%;
-	-moz-box-shadow:inset 0px 39px 0px -24px #e67a73;
-	-webkit-box-shadow:inset 0px 39px 0px -24px #e67a73;
-	box-shadow:inset 0px 39px 0px -24px #e67a73;
+	-moz-box-shadow:inset 0px 39px 0px -24px #ff8080;
+	-webkit-box-shadow:inset 0px 39px 0px -24px #ff8080;
+	box-shadow:inset 0px 39px 0px -24px #ff8080;
 	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #e4685d), color-stop(1, #eb675e));
 	background:-moz-linear-gradient(top, #e4685d 5%, #eb675e 100%);
 	background:-webkit-linear-gradient(top, #e4685d 5%, #eb675e 100%);
@@ -129,9 +160,9 @@ html,body{
 .buttonBlue {
   height:60%;
   width:50%;
-	-moz-box-shadow:inset 0px 39px 0px -24px #33ccff;
-	-webkit-box-shadow:inset 0px 39px 0px -24px #33ccff;
-	box-shadow:inset 0px 39px 0px -24px #33ccff;
+	-moz-box-shadow:inset 0px 39px 0px -24px #00ffff;
+	-webkit-box-shadow:inset 0px 39px 0px -24px #00ffff;
+	box-shadow:inset 0px 39px 0px -24px #00ffff;
 	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #33ccff), color-stop(1, #33ccff));
 	background:-moz-linear-gradient(top, #33ccff 5%, #33ccff 100%);
 	background:-webkit-linear-gradient(top, #33ccff 5%, #33ccff 100%);
@@ -155,3 +186,4 @@ html,body{
 	text-decoration:none;
 	text-shadow:3px 4px 2px #0000ff;
 }
+</style>
