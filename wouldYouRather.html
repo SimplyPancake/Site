@@ -34,6 +34,8 @@ voordeel[2] = "be able to do anything you want"
 voordeel[3] = "know all the things of the world"
 voordeel[4] = "be able to decide the fate of life and death of anyone"
 voordeel[5] = "be able to see into your own future"
+voordeel[6] = "be able to talk to animals"
+voordeel[7] = "eat what you want and not get fat"
 
 var nadeelArray;
 var nadeel = [];
@@ -108,10 +110,25 @@ html,body{
   cursor: pointer;
 }
 
+.rectangleRed:hover {
+  height: 50%;
+  width: 100%;
+  background: #ff6666;
+  background: linear-gradient(#ff8080, #ff6666);
+  cursor: pointer;
+}
+
 .rectangleBlue {
   height: 50%;
   width: 100%;
   background: #33ccff;
+  cursor: pointer;
+}
+.rectangleBlue:hover {
+  height: 50%;
+  width: 100%;
+  background: #33ccff;
+  background: linear-gradient(#00ffff, #33ccff);
   cursor: pointer;
 }
 
@@ -182,33 +199,4 @@ html,body{
 	text-shadow:3px 4px 2px #b23e35;
 }
 
-.buttonBlue {
-  height:60%;
-  width:50%;
-	-moz-box-shadow:inset 0px 39px 0px -24px #00ffff;
-	-webkit-box-shadow:inset 0px 39px 0px -24px #00ffff;
-	box-shadow:inset 0px 39px 0px -24px #00ffff;
-	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #33ccff), color-stop(1, #33ccff));
-	background:-moz-linear-gradient(top, #33ccff 5%, #33ccff 100%);
-	background:-webkit-linear-gradient(top, #33ccff 5%, #33ccff 100%);
-	background:-o-linear-gradient(top, #33ccff 5%, #33ccff 100%);
-	background:-ms-linear-gradient(top, #33ccff 5%, #33ccff 100%);
-	background:linear-gradient(to bottom, #33ccff 5%, #33ccff 100%);
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#33ccff', endColorstr='#33ccff',GradientType=0);
-	background-color:#33ccff;
-	-moz-border-radius:42px;
-	-webkit-border-radius:42px;
-	border-radius:42px;
-	border:2px solid #ffffff;
-	display:inline-block;
-	cursor:pointer;
-	color:#ffffff;
-	font-family:Courier New;
-	font-size:16px;
-	font-weight:bold;
-	font-style:italic;
-	padding:5px 76px;
-	text-decoration:none;
-	text-shadow:3px 4px 2px #0000ff;
-}
 </style>
