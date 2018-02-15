@@ -2,7 +2,14 @@
 <html>
 
 <body>
-  <div class="rectangleRed" onclick="cycleQuestions()">
+  <div class="dropdown" style="float:right;">
+    <button class="dropbtn">View options</button>
+    <div class="dropdown-content">
+      <a href="wouldYouRatherAnalyze.html">Analyse click data</a>
+      <a onclick="location.reload();">Go to the 'would you rather' questions</a>
+    </div>
+  </div>
+  <div class="rectangleRed" onclick="cycleQuestions();">
     <div class="wrapper">
       <!-- <button class="buttonRed" onclick="cycleQuestions()">Choose option Red</button> -->
       <br><br><br><br><br><br>
@@ -10,7 +17,7 @@
       <a class="rodeVraagCSS" id="redTekst">Which one to choose?</a>
     </div>
   </div>
-  <div class="rectangleBlue" onclick="cycleQuestions()">
+  <div class="rectangleBlue" onclick="cycleQuestions(); blueClickAdd();">
     <div class="wrapper">
       <!-- <button class="buttonBlue" onclick="cycleQuestions()">Choose option Blue</button> -->
       <br><br><br><br><br><br>
@@ -77,7 +84,8 @@
   cVragen[11] = "Always have to say everything on my mind"
   cVragenAntwoord[11] = "Never be able to speak again"
   //------------------------------------------------------------------------------------------------------------
-  var alGedaan = [];
+  var clicksBlue;
+  var clicksRed;
 
   function cycleQuestions() {
     genres = Math.floor((Math.random() * 2) + 1);
@@ -174,5 +182,49 @@
 
   .wrapper {
     text-align: center;
+  }
+
+  .dropbtn {
+    background-color: #34495E;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    cursor: pointer;
+  }
+
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+  .dropdown-content a:hover {
+    background-color: #f1f1f1
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  .dropdown:hover .dropbtn {
+    background-color: #1D2936;
   }
 </style>
