@@ -57,13 +57,18 @@ cVragen[2] = "Tea"
 cVragenAntwoord[2] = "Coffee"
 cVragen[3] = "Control the elements"
 cVragenAntwoord[3] = "Control time"
-cVragen[4] = "dit is rood"
-cVragenAntwoord[4] = "dit blauw dus???"
+cVragen[4] = "Eat a pinecone"
+cVragenAntwoord[4] = "Eat an acorn"
+cVragen[5] = "Buy a PS4"
+cVragenAntwoord[5] = "Buy an XBOX(don't)"
+cVragen[6] = "Be stoned to death"
+cVragenAntwoord[6] = "Be grounded to death"
+cVragen[7] = "Inform a room of first grade students that their favorite pets have died tragically"
+cVragenAntwoord[7] = "Explain to a room of first grade students how sex works in graphic detail"
 
 
 function cycleQuestions(){
-// genresArray = Math.floor((Math.random() * 2) + 1);
-genres = 2;
+genres = Math.floor((Math.random() * 2) + 1);
 //randomize een nummer van 1 tot en met 3 tot het variabel genresArray
 if (genres == 1) {
   //Als genresArray hetzelfde is als 2, doe dit script
