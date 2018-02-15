@@ -29,29 +29,62 @@ var aantalVragen = 6;
 var laatsteVraag = 0;
 var vragen = [];
 var cVragen = [];
+var genresArray;
+// genre 1 =  "Rather lose a .... or a ...";
+// genre 2 = "Rather be advantage with disadvantage or rather be disadvantage with advantage";
+// genre 3 = "Rather have a sister(een) or a brother(ander)";
+var voordeelArray;
+var voordeel = [];
+voordeel[1] = "have anything transform to gold when you want";
+
+var nadeelArray;
+var nadeel = [];
+nadeel[1] = "never live in a house ever again"
+
 //Nu is het systeem zo dat één vraag altijd correspondeert met een ander
 //Het systeem kan ook zo zijn dat je heel erg gelijke vragen hebt, en dat er random wordt geselecteerd
-vragen[1] = "Always be 10 minutes late";
-cVragen[vragen[1]] = "Always be 20 minutes early"
-vragen[2] = "Lose all of your money and valuables";
-cVragen[vragen[2]] = "Lose all the pictures you have ever taken";
-vragen[3] = "Be able to see 10 minutes into your own future";
-cVragen[vragen[3]] = "Be able to see 10 minutes of the future of anyone but yourself";
-vragen[4] = "Go to jail for something you didn't do";
-cVragen[vragen[4]] = "Get away with something horrible but live in fear of being caught";
-vragen[5] = "Be responsible for the death of a child";
-cVragen[vragen[5]] = "Be responsible for the death of 3 adults"
-vragen[6] = "Never use social media sites/apps again"
-cVragen[vragen[6]] = "Never watch a TV show or movie ever again"
 
+// Dit is het oude systeem hieronder
+// vragen[1] = "Always be 10 minutes late";
+// cVragen[vragen[1]] = "Always be 20 minutes early"
+// vragen[2] = "Lose all of your money and valuables";
+// cVragen[vragen[2]] = "Lose all the pictures you have ever taken";
+// vragen[3] = "Be able to see 10 minutes into your own future";
+// cVragen[vragen[3]] = "Be able to see 10 minutes of the future of anyone but yourself";
+// vragen[4] = "Go to jail for something you didn't do";
+// cVragen[vragen[4]] = "Get away with something horrible but live in fear of being caught";
+// vragen[5] = "Be responsible for the death of a child";
+// cVragen[vragen[5]] = "Be responsible for the death of 3 adults"
+// vragen[6] = "Never use social media sites/apps again"
+// cVragen[vragen[6]] = "Never watch a TV show or movie ever again"
 
 function cycleQuestions(){
-vragenPower = Math.floor((Math.random() * aantalVragen) + 1);
-// maakt een random nummer aan dat kan rijken van 1 tot het maximaal aantal vragen (zie het variabel aantalVragen).
-document.getElementById("redTekst").innerHTML = vragen[vragenPower];
-var vragenBetekenis = vragen[vragenPower];
-document.getElementById("blueTekst").innerHTML = cVragen[vragenBetekenis];
+// genresArray = Math.floor((Math.random() * 3) + 1);
+genresArray = 2;
+//randomize een nummer van 1 tot en met 3 tot het variabel genresArray
+if (genresArray == 1) {
+  //Als genresArray hetzelfde is als 1, doe dit script
+
 }
+if (genresArray == 2) {
+  //Als genresArray hetzelfde is als 2, doe dit script
+  voordeelArray = Math.floor((Math.random() * 1) + 1);
+  nadeelArray = Math.floor((Math.random() * 1) + 1);
+  document.getElementById("redTekst").innerHTML = "Rather " + voordeel[voordeelArray] + ", but " + nadeel[nadeelArray];
+}
+if (genresArray == 3) {
+  //Als genresArray hetzelfde is als 3, doe dit script
+}
+
+}
+// Dit is het oude systeem hieronder
+// function cycleQuestions(){
+// vragenPower = Math.floor((Math.random() * aantalVragen) + 1);
+// // maakt een random nummer aan dat kan rijken van 1 tot het maximaal aantal vragen (zie het variabel aantalVragen).
+// document.getElementById("redTekst").innerHTML = vragen[vragenPower];
+// var vragenBetekenis = vragen[vragenPower];
+// document.getElementById("blueTekst").innerHTML = cVragen[vragenBetekenis];
+// }
 
 </script>
 
