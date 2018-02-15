@@ -9,7 +9,6 @@
         <a class="rodeVraagCSS" id="redTekst">Which one to choose?</a>
     </div>
   </div>
-
   <div class="rectangleBlue" onclick="cycleQuestions()">
     <div class="wrapper">
       <!-- <button class="buttonBlue" onclick="cycleQuestions()">Choose option Blue</button> -->
@@ -20,7 +19,6 @@
   </div>
 <body>
 </html>
-
 <script>
 // ------------------------------------------------------------------------------------------
 var genres;
@@ -75,9 +73,7 @@ cVragen[10] = "Have taste buds on my butthole"
 cVragenAntwoord[10] = "Poop through my mouth"
 cVragen[11] = "Always have to say everything on my mind"
 cVragenAntwoord[11] = "Never be able to speak again"
-
 //------------------------------------------------------------------------------------------------------------
-
 function cycleQuestions(){
 genres = Math.floor((Math.random() * 2) + 1);
 //randomize een nummer van 1 tot en met 3 tot het variabel genresArray
@@ -109,7 +105,6 @@ html,body{
   background: #ff6666;
   cursor: pointer;
 }
-
 .rectangleRed:hover {
   height: 50%;
   width: 100%;
@@ -117,7 +112,6 @@ html,body{
   background: linear-gradient(#ff8080, #ff6666);
   cursor: pointer;
 }
-
 .rectangleBlue {
   height: 50%;
   width: 100%;
@@ -131,7 +125,6 @@ html,body{
   background: linear-gradient(#80ffff, #33ccff);
   cursor: pointer;
 }
-
 .rodeVraagCSS {
   height: 25%;
   width: 50%;
@@ -148,7 +141,6 @@ html,body{
   -ms-user-select: none;
   user-select: none;
 }
-
 .blauweVraagCSS {
   height: 25%;
   width: 50%;
@@ -165,7 +157,6 @@ html,body{
   -ms-user-select: none;
   user-select: none;
 }
-
 .wrapper {
     text-align: center;
 }
