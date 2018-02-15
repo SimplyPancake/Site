@@ -35,11 +35,17 @@ var genresArray;
 // genre 3 = "Rather have a sister(een) or a brother(ander)";
 var voordeelArray;
 var voordeel = [];
+var aantalVoordeel = 3;
 voordeel[1] = "have anything transform to gold when you want";
+voordeel[2] = "Be able to do anything you want"
+voordeel[3] = "Know all the things of the world"
 
 var nadeelArray;
 var nadeel = [];
+var aantalNadeel = 3;
 nadeel[1] = "never live in a house ever again"
+nadeel[2] = "die at the age of 30"
+nadeel[3] = "never be able to share secrets with anyone"
 
 //Nu is het systeem zo dat één vraag altijd correspondeert met een ander
 //Het systeem kan ook zo zijn dat je heel erg gelijke vragen hebt, en dat er random wordt geselecteerd
@@ -68,9 +74,12 @@ if (genresArray == 1) {
 }
 if (genresArray == 2) {
   //Als genresArray hetzelfde is als 2, doe dit script
-  voordeelArray = Math.floor((Math.random() * 1) + 1);
-  nadeelArray = Math.floor((Math.random() * 1) + 1);
+  voordeelArray = Math.floor((Math.random() * aantalVoordeel) + 1);
+  nadeelArray = Math.floor((Math.random() * aantalNadeel) + 1);
   document.getElementById("redTekst").innerHTML = "Rather " + voordeel[voordeelArray] + ", but " + nadeel[nadeelArray];
+  voordeelArray = Math.floor((Math.random() * aantalVoordeel) + 1);
+  nadeelArray = Math.floor((Math.random() * aantalNadeel) + 1);
+  document.getElementById("blueTekst").innerHTML = "Rather " + voordeel[voordeelArray] + ", but " + nadeel[nadeelArray];
 }
 if (genresArray == 3) {
   //Als genresArray hetzelfde is als 3, doe dit script
