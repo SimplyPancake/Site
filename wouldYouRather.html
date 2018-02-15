@@ -22,16 +22,10 @@
 </html>
 
 <script>
-var rodeVraag;
-var blauweVraag;
-var count = 0;
-var aantalVragen = 6;
-var laatsteVraag = 0;
-var vragen = [];
-var cVragen = [];
-var genresArray;
+// ------------------------------------------------------------------------------------------
+var genres;
 // genre 1 = "Rather be advantage with disadvantage or rather be disadvantage with advantage";
-// genre 2 = "Rather have a sister(een) or a brother(ander)";
+// genre 2 = "corresponderende vragen"
 var voordeelArray;
 var voordeel = [];
 var aantalVoordeel = 4;
@@ -52,15 +46,26 @@ nadeel[5] = "be responsible for the death of a child"
 nadeel[6] = "never watch a TV show or movie ever again"
 nadeel[7] = "go to jail for something you didnt do"
 nadeel[8] = "always be 20 minutes late"
+//------------------------------------------------------------------
+var cVragen = [];
+var cVragenAntwoord = [];
+var cVragenArray;
+var cVragenAantal = 4;
+cVragen[1] = "Have to kill the animal for every meat you eat"
+cVragenAntwoord[1] = "Never eat meat again"
+cVragen[2] = "Tea"
+cVragenAntwoord[2] = "Coffee"
+cVragen[3] = "Control the elements"
+cVragenAntwoord[3] = "Control time"
+cVragen[4] = "dit is rood"
+cVragenAntwoord[4] = "dit blauw dus???"
+
 
 function cycleQuestions(){
-// genresArray = Math.floor((Math.random() * 3) + 1);
-genresArray = 2;
+// genresArray = Math.floor((Math.random() * 2) + 1);
+genres = 2;
 //randomize een nummer van 1 tot en met 3 tot het variabel genresArray
-if (genresArray == 1) {
-  //Als genresArray hetzelfde is als 1, doe dit script
-}
-if (genresArray == 2) {
+if (genres == 1) {
   //Als genresArray hetzelfde is als 2, doe dit script
   voordeelArray = Math.floor((Math.random() * aantalVoordeel) + 1);
   nadeelArray = Math.floor((Math.random() * aantalNadeel) + 1);
@@ -68,6 +73,12 @@ if (genresArray == 2) {
   voordeelArray = Math.floor((Math.random() * aantalVoordeel) + 1);
   nadeelArray = Math.floor((Math.random() * aantalNadeel) + 1);
   document.getElementById("blueTekst").innerHTML = "Rather " + voordeel[voordeelArray] + ", but " + nadeel[nadeelArray];
+  }
+if (genres == 2) {
+  //Dit is de modus van exact corresponderende vragen
+  cVragenArray = Math.floor((Math.random() * cVragenAantal) + 1);
+  document.getElementById("redTekst").innerHTML = cVragen[cVragenArray]
+  document.getElementById("blueTekst").innerHTML = cVragenAntwoord[cVragenArray]
   }
 }
 </script>
