@@ -3,7 +3,7 @@
 
 <body>
   <!-- Hier is het rode deel -->
-  <div class="rectangleRed" onclick="cycleQuestions(); clicksRed = clicksRed + 1;">
+  <div class="rectangleRed" onclick="cycleQuestions(); redClick(); drawChart();">
     <div class="wrapper">
       <!-- <button class="buttonRed" onclick="cycleQuestions()">Choose option Red</button> -->
       <br><br><br><br><br><br>
@@ -12,7 +12,7 @@
     </div>
   </div>
   <!-- Hier is het blauwe deel -->
-  <div class="rectangleBlue" onclick="cycleQuestions(); clicksBlue = clicksBlue + 1;">
+  <div class="rectangleBlue" onclick="cycleQuestions(); blueClick(); drawChart();">
     <div class="wrapper">
       <!-- <button class="buttonBlue" onclick="cycleQuestions()">Choose option Blue</button> -->
       <br><br><br><br><br><br>
@@ -122,24 +122,27 @@
   //----------------------------------------------------------------------------------------------------
   // Load google charts
 
-  var blauweKlik = clicksBlue;
-  var rodeKlik = clicksRed;
+function redClick(){
+  clicksRed = clicksRed + 1;
+}
 
+function blueClick(){
+  clicksBlue = clicksBlue + 1;
+}
 
   google.charts.load('current', {
     'packages': ['corechart']
   });
-  google.charts.setOnLoadCallback(drawChart);
 
-  var totalClicks = clicksRed + clicksBlue;
+  google.charts.setOnLoadCallback(drawChart);
 
   // Draw the chart and set the chart values
 
   function drawChart() {
     var data = google.visualization.arrayToDataTable([
       ['totaal', 'totalClicks'],
-      ['Blue clicks', blauweKlik],
-      ['Red clicks', rodeKlik],
+      ['Blue clicks', clicksBlue],
+      ['Red clicks', clicksRed],
     ]);
 
 
