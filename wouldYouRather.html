@@ -122,13 +122,13 @@
   //----------------------------------------------------------------------------------------------------
   // Load google charts
 
-function redClick(){
-  clicksRed = clicksRed + 1;
-}
+  function redClick() {
+    clicksRed = clicksRed + 1;
+  }
 
-function blueClick(){
-  clicksBlue = clicksBlue + 1;
-}
+  function blueClick() {
+    clicksBlue = clicksBlue + 1;
+  }
 
   google.charts.load('current', {
     'packages': ['corechart']
@@ -138,17 +138,18 @@ function blueClick(){
 
   // Draw the chart and set the chart values
 
-  function drawChart() {
-    var data = google.visualization.arrayToDataTable([
-      ['totaal', 'totalClicks'],
-      ['Blue clicks', clicksBlue],
-      ['Red clicks', clicksRed],
-    ]);
+    function drawChart() {
+      var data = google.visualization.arrayToDataTable([
+        ['totaal', 'totalClicks'],
+        ['Blue clicks', clicksBlue],
+        ['Red clicks', clicksRed],
+      ]);
+
 
 
     // Optional; add a title and set the width and height of the chart
     var options = {
-      'title': 'Colours clicked',
+      // 'title': 'Colours clicked',
       'width': 500,
       'height': 400
     };
