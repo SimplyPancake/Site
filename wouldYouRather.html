@@ -9,7 +9,7 @@
       <a onclick="location.reload();">Go to the 'would you rather' questions</a>
     </div>
   </div>
-  <div class="rectangleRed" onclick="cycleQuestions();">
+  <div class="rectangleRed" onclick="cycleQuestions(red);">
     <div class="wrapper">
       <!-- <button class="buttonRed" onclick="cycleQuestions()">Choose option Red</button> -->
       <br><br><br><br><br><br>
@@ -17,7 +17,7 @@
       <a class="rodeVraagCSS" id="redTekst">Which one to choose?</a>
     </div>
   </div>
-  <div class="rectangleBlue" onclick="cycleQuestions()">
+  <div class="rectangleBlue" onclick="cycleQuestions(blue)">
     <div class="wrapper">
       <!-- <button class="buttonBlue" onclick="cycleQuestions()">Choose option Blue</button> -->
       <br><br><br><br><br><br>
@@ -87,7 +87,7 @@
   var clicksBlue;
   var clicksRed;
 
-  function cycleQuestions() {
+  function cycleQuestions(kleurKlik) {
     genres = Math.floor((Math.random() * 2) + 1);
     //randomize een nummer van 1 tot en met 3 tot het variabel genresArray
     if (genres == 1) {
@@ -106,8 +106,11 @@
       //Als de vraag not niet is gesteld, stel dan een vraag
       document.getElementById("redTekst").innerHTML = cVragen[cVragenArray]
       document.getElementById("blueTekst").innerHTML = cVragenAntwoord[cVragenArray]
+      if (kleurKlik == "red") {
+        clicksBlue = clicksRed + 1;
+        localStorage.setItem("rodeKlik", clicksRed)
+      }
       // localStorage.lastname = "Smith";
-      localStorage.setItem("lastname", "Smith");
     }
   }
 </script>
