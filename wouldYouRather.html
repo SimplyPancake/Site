@@ -138,14 +138,12 @@
 
   // Draw the chart and set the chart values
 
-    function drawChart() {
-      var data = google.visualization.arrayToDataTable([
-        ['totaal', 'totalClicks'],
-        ['Blue clicks', clicksBlue],
-        ['Red clicks', clicksRed],
-      ]);
-
-
+  function drawChart() {
+    var data = google.visualization.arrayToDataTable([
+      ['totaal', 'totalClicks'],
+      ['Blue clicks', clicksBlue],
+      ['Red clicks', clicksRed],
+    ]);
 
     // Optional; add a title and set the width and height of the chart
     var options = {
