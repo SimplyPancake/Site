@@ -143,13 +143,16 @@
       ['totaal', 'totalClicks'],
       ['Blue clicks', clicksBlue],
       ['Red clicks', clicksRed],
-    ]);
+    ]);2
+
+var availHeight = screen.availHeight;
+var availWidth = screen.availWidth;
 
     // Optional; add a title and set the width and height of the chart
     var options = {
       // 'title': 'Colours clicked',
-      'width': 500,
-      'height': 400
+      'width': availWidth,
+      'height': availHeight
     };
 
     // Display the chart inside the <div> element with id="piechart"
