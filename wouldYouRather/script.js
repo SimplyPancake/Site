@@ -84,7 +84,7 @@ function cycleQuestions() {
     document.getElementById("blueTekst").innerHTML = cVragenAntwoord[cVragenArray]
   }
 
-  if ((clicksRed + clicksBlue >= 1)){
+  if ((clicksRed + clicksBlue > 0)){
     document.getElementById("rectWhite").style = "display: block; visibility: visible;";
   } else {
     document.getElementById("rectWhite").style = "display: none; visibility: hidden;";
