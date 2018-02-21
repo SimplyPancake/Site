@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <!-- Hier is het rode deel -->
+  <div class="rectangleRed" onclick="cycleQuestions(); redClick(); drawChart();">
+    <div class="wrapper">
+      <!-- <button class="buttonRed" onclick="cycleQuestions()">Choose option Red</button> -->
+      <br><br><br><br><br><br>
+      <!-- Ik heb even geen idee hoe ik die tekst in het midden krijg :/ -->
+      <a class="rodeVraagCSS" id="redTekst">Which one to choose?</a>
+    </div>
+  </div>
+  <!-- Hier is het blauwe deel -->
+  <div class="rectangleBlue" onclick="cycleQuestions(); blueClick(); drawChart();">
+    <div class="wrapper">
+      <!-- <button class="buttonBlue" onclick="cycleQuestions()">Choose option Blue</button> -->
+      <br><br><br><br><br><br>
+      <!-- Ik heb even geen idee hoe ik die tekst in het midden krijg :/ -->
+      <a class="blauweVraagCSS" id="blueTekst">Which one to choose?</a>
+    </div>
+  </div>
+  <!-- Hier is het witte deel(met grafiek onderaan) -->
+  <div class="rectangleWhite" id="rectWhite">
+    <div id="piechart" class="position: relative; left:50px; top:50px;"></div>
+  </div>
+
+  <body>
+
+</html>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript" src="script.js"></script>
+
+<style>
+html,
+body {
+  height: 100%;
+}
+
+.rectangleRed {
+  height: 50%;
+  width: 100%;
+  background: #ff6666;
+  cursor: pointer;
+}
+
+.rectangleRed:hover {
+  height: 50%;
+  width: 100%;
+  background: #ff6666;
+  background: linear-gradient(#ff8080, #ff6666);
+  cursor: pointer;
+}
+
+.rectangleBlue {
+  height: 50%;
+  width: 100%;
+  background: #33ccff;
+  cursor: pointer;
+}
+
+.rectangleBlue:hover {
+  background: #33ccff;
+  background: linear-gradient(#80ffff, #33ccff);
+  cursor: pointer;
+}
+
+.rectangleWhite {
+  height: 100%;
+  width: 100%;
+  background: white;
+}
+
+/*.rectangleWhite:hover {
+  background: white;
+  background: linear-gradient(white, #f3f4f7);
+}*/
+
+.rodeVraagCSS {
+  height: 25%;
+  width: 50%;
+  color: #ffffff;
+  font-family: Courier New;
+  font-size: 18px;
+  font-weight: bold;
+  font-style: italic;
+  text-shadow: 3px 4px 2px #b23e35;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.blauweVraagCSS {
+  height: 25%;
+  width: 50%;
+  color: #ffffff;
+  font-family: Courier New;
+  font-size: 18px;
+  font-weight: bold;
+  font-style: italic;
+  text-shadow: 3px 4px 2px #0000ff;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.wrapper {
+  text-align: center;
+}
+</style>
