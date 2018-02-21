@@ -4,14 +4,15 @@ var genres;
 // genre 2 = "corresponderende vragen"
 var voordeelArray;
 var voordeel = [];
-var aantalVoordeel = 7;
+var aantalVoordeel = 8;
 voordeel[1] = "have anything transform to gold when you want"
 voordeel[2] = "be able to do anything you want"
 voordeel[3] = "know all the things of the world"
 voordeel[4] = "be able to decide the fate of life and death of anyone"
 voordeel[5] = "be able to see into your own future"
 voordeel[6] = "be able to talk to animals"
-voordeel[7] = "eat what you want and not get fat"
+voordeel[7] = "eat what you want and never get fat"
+voordeel[8] = "choose the dream boy/girl of your life"
 
 var nadeelArray;
 var nadeel = [];
@@ -56,9 +57,28 @@ cVragenAntwoord[11] = "Never be able to speak again"
 var clicksBlue = 0;
 var clicksRed = 0;
 
+function redClick() {
+  clicksRed = clicksRed + 1;
+}
+
+function blueClick() {
+  clicksBlue = clicksBlue + 1;
+}
+
 console.log("You can ignore the errors above!")
 
+if ((clicksRed + clicksBlue) > 0) {
+  //Nu niks
+} else {
+  document.getElementById("rectWhite").style = "display: none; visibility: hidden;";
+}
+
 function cycleQuestions() {
+  if ((clicksRed + clicksBlue > 0)){
+    document.getElementById("rectWhite").style = "display: block; visibility: visible;";
+  } else {
+    document.getElementById("rectWhite").style = "display: none; visibility: hidden;";
+  }
   console.clear();
   console.log("Rode cliks: " + clicksRed);
   console.log("Blauwe clicks: " + clicksBlue);
@@ -83,24 +103,10 @@ function cycleQuestions() {
     document.getElementById("redTekst").innerHTML = cVragen[cVragenArray]
     document.getElementById("blueTekst").innerHTML = cVragenAntwoord[cVragenArray]
   }
-
-  if ((clicksRed + clicksBlue > 0)){
-    document.getElementById("rectWhite").style = "display: block; visibility: visible;";
-  } else {
-    document.getElementById("rectWhite").style = "display: none; visibility: hidden;";
-  }
 }
 
 //----------------------------------------------------------------------------------------------------
 // Load google charts
-
-function redClick() {
-  clicksRed = clicksRed + 1;
-}
-
-function blueClick() {
-  clicksBlue = clicksBlue + 1;
-}
 
 google.charts.load('current', {
   'packages': ['corechart']
