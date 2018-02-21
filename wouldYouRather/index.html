@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <!-- Hier is het rode deel -->
+  <div class="rectangleRed" onclick="cycleQuestions(); redClick(); drawChart();">
+    <div class="wrapper">
+      <br><br><br><br><br><br>
+      <!-- Ik heb even geen idee hoe ik die tekst in het midden krijg :/ -->
+      <a class="rodeVraagCSS" id="redTekst">Which one to choose?</a>
+    </div>
+  </div>
+  <!-- Hier is het blauwe deel -->
+  <div class="rectangleBlue" onclick="cycleQuestions(); blueClick(); drawChart();">
+    <div class="wrapper">
+      <br><br><br><br><br><br>
+      <!-- Ik heb even geen idee hoe ik die tekst in het midden krijg :/ -->
+      <a class="blauweVraagCSS" id="blueTekst">Which one to choose?</a>
+    </div>
+  </div>
+  <!-- Hier is het witte deel(met grafiek onderaan) -->
+  <div class="rectangleWhite" id="rectWhite">
+    <div id="piechart" style="position: relative; left:50px; top:50px;"></div>
+  </div>
+
+  <body>
+
+</html>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript" src="script.js"></script>
+<link rel="stylesheet" type="text/css" href="style.css">
