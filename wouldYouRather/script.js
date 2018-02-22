@@ -79,7 +79,7 @@ if ((clicksRed + clicksBlue) > 0) {
 }
 
 function cycleQuestions() {
-  if ((clicksRed + clicksBlue) >= 15) {
+  if ((clicksRed + clicksBlue) > 14) {
     w3_open();
   }
   if ((clicksRed + clicksBlue > 0)){
