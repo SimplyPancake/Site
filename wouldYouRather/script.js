@@ -65,7 +65,12 @@ function blueClick() {
   clicksBlue = clicksBlue + 1;
 }
 
-console.log("You can ignore the errors above!")
+function w3_open() {
+    document.getElementById("sideBar").style = "display: block; visibility: visible;";
+}
+function w3_close() {
+    document.getElementById("sideBar").style = "display: none; visibility: hidden";
+}
 
 if ((clicksRed + clicksBlue) > 0) {
   //Nu niks
@@ -74,6 +79,9 @@ if ((clicksRed + clicksBlue) > 0) {
 }
 
 function cycleQuestions() {
+  if ((clicksRed + clicksBlue) >= 15) {
+    w3_open();
+  }
   if ((clicksRed + clicksBlue > 0)){
     document.getElementById("rectWhite").style = "display: block; visibility: visible;";
   } else {
@@ -137,3 +145,5 @@ function drawChart() {
   var chart = new google.visualization.PieChart(document.getElementById('piechart'));
   chart.draw(data, options);
 }
+
+console.log("You can ignore the errors above!")
