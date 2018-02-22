@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html>
+
 <body>
+  <!-- Dit is de sidebar -->
+  <div class="w3-sidebar w3-bar-block w3-dark-grey w3-animate-left" style="display: none; visibility: hidden;" id="sideBar">
+    <button class="w3-bar-item w3-button w3-large" onclick="w3_close()">Close &times;</button>
+    <a>Like this game? Be sure to download our </a><a href="TheWouldYouRatherGame.apk">Android App</a>
+  </div>
+
   <!-- Hier is het rode deel -->
   <div class="rectangleRed" onclick="cycleQuestions(); redClick(); drawChart();">
     <div class="wrapper">
@@ -9,6 +16,7 @@
       <a class="rodeVraagCSS" id="redTekst">Which one to choose?</a>
     </div>
   </div>
+
   <!-- Hier is het blauwe deel -->
   <div class="rectangleBlue" onclick="cycleQuestions(); blueClick(); drawChart();">
     <div class="wrapper">
@@ -17,14 +25,21 @@
       <a class="blauweVraagCSS" id="blueTekst">Which one to choose?</a>
     </div>
   </div>
+
   <!-- Hier is het witte deel(met grafiek onderaan) -->
   <div class="rectangleWhite" id="rectWhite">
     <div id="piechart" style="position: relative; left:50px; top:50px;"></div>
   </div>
 
+
   <body>
 
 </html>
+<!-- Linkje naar de google pie chart script -->
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<!-- Linkje naar mijn eigen javascript document -->
 <script type="text/javascript" src="script.js"></script>
+<!-- Linkje naar mijn eigen css file -->
 <link rel="stylesheet" type="text/css" href="style.css">
+<!-- Linkje naar de w3schools sidebar -->
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
