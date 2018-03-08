@@ -3,8 +3,8 @@
 <head>
 </head>
 <body>
-  <p id="cooordinaten" style="position: absolute;"></p>
-  <img src="https://discordemoji.com/assets/emoji/kys.png" width="100%" height="100%"></img>
+<div class="divje"onmousemove="getCoords(event)" onclick="changePic(picX[91])">
+  <img id="neushoornPlaatje" src="https://discordemoji.com/assets/emoji/kys.png" width="100%" height="100%"></img>
 </div>
 </body>
 </html>
@@ -13,7 +13,7 @@
 picX = [];
 picY = [];
 //Ik maak een array aan waarbij de foto het percentage aangeeft waar de pointer exact moet zijn
-picxX[91] = "http://rhino911.com/wp-content/uploads/2017/05/what-is-a-rhino-and-how-many-types-are-there-900x564.jpg";
+picX[91] = "http://rhino911.com/wp-content/uploads/2017/05/what-is-a-rhino-and-how-many-types-are-there-900x564.jpg";
 picY[68] = "http://rhino911.com/wp-content/uploads/2017/05/what-is-a-rhino-and-how-many-types-are-there-900x564.jpg";
 
 function getCoords(event) {
@@ -32,11 +32,14 @@ function getCoords(event) {
     var percentY = Math.round(cY / wHeight * 100);
     var coords4 = "X: " + percentX + "%, Y: " + percentY  + "%";
     //Het percentage is de relatie tussen de X  en Y coords van het browser-window en de size van het browser-window
-    document.getElementById("cooordinaten").innerHTML = coords1 + "<br>" + coords2 + "<br>" + coords3 + "<br>" + coords4;
+    console.clear();
+    console.log(coords1);
+    console.log(coords2);
+    console.log(coords3);
+    console.log(coords4);
 }
-
 function changePic(siteUrl){
-
+  document.getElementById('neushoornPlaatje').src = picX[91];
 }
 
 </script>
