@@ -1,53 +1,11 @@
 <!DOCTYPE html>
 <html>
-<head>
-</head>
-<body>
-<div class="divje"onmousemove="getCoords(event)" onclick="changePic(picX[91])">
-  <img id="neushoornPlaatje" src="https://discordemoji.com/assets/emoji/kys.png" width="100%" height="100%"></img>
-</div>
+<body onload="neushoornPlaatje.style = "display: none;">
+  <div class="divje" onclick="changePic()" onmousemove="logCoords()">
+    <img id="neushoornPlaatje" width="100%" height="100%"></img>
+  </div>
 </body>
+
+<script src="script.js"></script>
+<link rel="stylesheet" type="text/css" href="style.css">
 </html>
-
-<script>
-picX = [];
-picY = [];
-//Ik maak een array aan waarbij de foto het percentage aangeeft waar de pointer exact moet zijn
-picX[91] = "http://rhino911.com/wp-content/uploads/2017/05/what-is-a-rhino-and-how-many-types-are-there-900x564.jpg";
-picY[68] = "http://rhino911.com/wp-content/uploads/2017/05/what-is-a-rhino-and-how-many-types-are-there-900x564.jpg";
-
-function getCoords(event) {
-    var cX = event.clientX; var cY = event.clientY;
-    //Krijg variabelen als 'clientsizeX' en 'clientsizeY'
-    var sX = event.screenX; var sY = event.screenY;
-    // maar ook screensizeX en screensizeY...(niet zo belangrijk)
-    //Zie: https://i.stack.imgur.com/6xPdH.png    We gaan 'windowWidth' gebruiken
-    var wWidth = window.innerWidth;
-    var wHeight = window.innerHeight;
-    //Nu krijg ik ook de windowWidth en Height. Hier wordt de app op gebaseerd.
-    var coords1 = "client - X: " + cX + ", Y coords: " + cY;
-    var coords2 = "screen - X: " + sX + ", Y coords: " + sY;
-    var coords3 = "window size: - X: " + wWidth + ", Y: " + wHeight;
-    var percentX = Math.round(cX / wWidth * 100);
-    var percentY = Math.round(cY / wHeight * 100);
-    var coords4 = "X: " + percentX + "%, Y: " + percentY  + "%";
-    //Het percentage is de relatie tussen de X  en Y coords van het browser-window en de size van het browser-window
-    console.clear();
-    console.log(coords1);
-    console.log(coords2);
-    console.log(coords3);
-    console.log(coords4);
-}
-function changePic(siteUrl){
-  document.getElementById('neushoornPlaatje').src = picX[91];
-}
-
-</script>
-<style>
-.divje {
-    width: 100hv ;
-    height: 100vh;
-    border: 1px solid black;
-    text-align: center;
-}
-</style>
