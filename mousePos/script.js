@@ -1,5 +1,6 @@
 picX = [92, 81];
 picY = [81, 47];
+var touchX = 82, touchY = 46;
 picX[92] = "https://goo.gl/8cm9HU";
 picY[81] = "https://goo.gl/8cm9HU";
 
@@ -20,13 +21,13 @@ function logCoords() {
     //Zie: https://i.stack.imgur.com/6xPdH.png    We gaan 'windowWidth' gebruiken
     var wWidth = window.innerWidth;
     var wHeight = window.innerHeight;
+    touchX = cX;
+    touchY = cY;
     //Nu krijg ik ook de windowWidth en Height. Hier wordt de app op gebaseerd.
     var coords1 = "client - X: " + cX + ", Y coords: " + cY;
     var coords3 = "window size: - X: " + wWidth + ", Y: " + wHeight;
     var percentX = Math.round(cX / wWidth * 100);
     var percentY = Math.round(cY / wHeight * 100);
-    fpercentX = percentX
-    fpercentY = percentY
     var coords4 = "X: " + percentX + "%, Y: " + percentY  + "%";
     //Het percentage is de relatie tussen de X  en Y coords van het browser-window en de size van het browser-window
 
@@ -39,5 +40,16 @@ function logCoords() {
 }
 // ----------------------------------------------------------------------------------------------------------------
 function changePic(){
-// yes.
+  const coords = [[92, 81],  [82, 47], [81, 03], [1,1]];
+  let closest = [null, null];
+  let distance = Infinity;
+
+  for(const [x, y] of coords){
+    let d = Math.sqrt((touchX - x) ** 2 + (touchY - y) ** 2);
+    if(d < distance){
+      closest = [x, y];
+      distance = d;
+    }
+  }
+  console.log(closest);
 }
