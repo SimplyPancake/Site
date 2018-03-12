@@ -4,19 +4,19 @@
   border: 1px solid black;
 }
 
-.ldBar{
-    position: fixed;
-    z-index: 999;
+.ldBar {
+  position: fixed;
+  z-index: 999;
 }
 
-.welkomTekst{
-    position: fixed;
-    z-index: 1001;
-    color: #111;
-    font-family: 'Helvetica Neue', sans-serif;
-    font-size: 75px;
-    font-weight: bold;
-    letter-spacing: -1px;
-    line-height: 1;
-    text-align: center;
+.welkomTekst {
+  position: fixed;
+  z-index: 1001;
+  color: #111;
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 75px;
+  font-weight: bold;
+  letter-spacing: -1px;
+  line-height: 1;
+  text-align: center;
 }

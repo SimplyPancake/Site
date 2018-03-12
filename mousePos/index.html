@@ -1,28 +1,25 @@
 <!DOCTYPE html>
 <html>
+
 <body>
   <div class="divje" onmousemove="logCoords(), putAwayText()">
     <a class="welkomTekst" id="welkomTekst">Welcome, to RhinoPointer 9000! Please move your mouse to begin, hold mouse still to let a rhino point at you!</a>
-    <div
-      class="ldBar label-center"
-      id="ldBarId"
-      style="width:100%; height:100%; margin:auto"
-      data-value="0"
-      data-preset="rainbow"
-    ></div>
+    <div class="ldBar label-center" id="ldBarId" style="width:100%; height:100%; margin:auto" data-value="0" data-preset="rainbow"></div>
     <img id="neushoornPlaatje" width="100%" height="100%"></img>
   </div>
 </body>
 
 
-<script src="script.js"></script> <!-- Main script -->
+<script src="script.js"></script>
+<!-- Main script -->
 <script type="text/javascript" src="loading-bar/loading-bar.js"></script>
 <script>
-var bar1 = new ldBar("#ldBarId");
-var bar2 = document.getElementById('ldBarId').ldBar;
-bar1.set(100);
+  var bar1 = new ldBar("#ldBarId");
+  var bar2 = document.getElementById('ldBarId').ldBar;
+  bar1.set(100);
 </script>
 
-<link rel="stylesheet" type="text/css" href="loading-bar/loading-bar.css"/>
+<link rel="stylesheet" type="text/css" href="loading-bar/loading-bar.css" />
 <link rel="stylesheet" type="text/css" href="style.css">
+
 </html>

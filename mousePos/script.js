@@ -31,9 +31,9 @@ function putAwayText() {
   if (text == "doneRead") {
     document.getElementById('welkomTekst').style = "display: none;"
     var timeout;
-    document.onmousemove = function(){
+    document.onmousemove = function() {
       clearTimeout(timeout);
-      timeout = setTimeout(function(){
+      timeout = setTimeout(function() {
         changePic();
       }, 2000);
     }
