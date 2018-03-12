@@ -1,19 +1,44 @@
-// ----------------------------------------------------------------------------------------------------------------
 const coords = [
   [92, 81],
   [81, 47],
   [81, 03]
 ];
 var touchX = 50,
-  touchY = 50;
+  touchY = 50,
+  placementX, placementY;
 coords[[92, 81]] = "https://goo.gl/8cm9HU";
 coords[[81, 47]] = "https://goo.gl/azAT2j";
 coords[[81, 03]] = "https://goo.gl/htsTmk";
 
 console.log("Please ignore the errors, HTML is being a retard again...");
 // ----------------------------------------------------------------------------------------------------------------
+var text = "gone";
+document.getElementById('neushoornPlaatje').style = " display: none;"
+document.getElementById('welkomTekst').style = "display: none;"
 
+setTimeout(function() {
+  document.getElementById('neushoornPlaatje').style = "display: block;"
+  document.getElementById('ldBarId').style = " display: none;"
+  document.getElementById('welkomTekst').style = " display: block;"
+  text = "here"
+}, 1400); //1100 is het beste, maar 1400 maakt er iets menselijks van!
 
+setTimeout(function() {
+  text = "doneRead";
+}, 1400 + 2900); //De vorige tijd + de tijd die je wilt zetten hoe lang het duurt om de tekst te lezen
+
+function putAwayText() {
+  if (text == "doneRead") {
+    document.getElementById('welkomTekst').style = "display: none;"
+    var timeout;
+    document.onmousemove = function(){
+      clearTimeout(timeout);
+      timeout = setTimeout(function(){
+        changePic();
+      }, 2000);
+    }
+  }
+}
 // ----------------------------------------------------------------------------------------------------------------
 function logCoords() {
   var cX = event.clientX;
