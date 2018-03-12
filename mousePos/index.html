@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
-<body onload="neushoornPlaatje.style = "display: none;">
-  <div class="divje" onclick="changePic()" onmousemove="logCoords()">
+<body>
+  <div class="divje" onclick="changePic();" onmousemove="logCoords(), putAwayText()" >
+    <a class="welkomTekst" id="welkomTekst">Welcome, to RhinoPointer 9000! Please move your mouse to begin…</a>
     <div
       class="ldBar label-center"
       id="ldBarId"
@@ -15,7 +16,11 @@
 
 <script src="script.js"></script>
 <script type="text/javascript" src="loading-bar/loading-bar.js"></script>
-<script src="ldBarScript.js"></script>
+<script>
+var bar1 = new ldBar("#ldBarId");
+var bar2 = document.getElementById('ldBarId').ldBar;
+bar1.set(100);
+</script>
 <link rel="stylesheet" type="text/css" href="loading-bar/loading-bar.css"/>
 <link rel="stylesheet" type="text/css" href="style.css">
 </html>
