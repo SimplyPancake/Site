@@ -1,20 +1,4 @@
-var text = "gone"
-document.getElementById('neushoornPlaatje').style = " display: none;"
-document.getElementById('welkomTekst').style = "display: none;"
-
-setTimeout(function() {
-  document.getElementById('neushoornPlaatje').style = "display: block;"
-  document.getElementById('ldBarId').style = " display: none;"
-  document.getElementById('welkomTekst').style = " display: block;"
-  text = "here"
-}, 1100);
-
-function putAwayText(){
-  if (text == "here") {
-  document.getElementById('welkomTekst').style = "display: none;"
-  }
-}
-
+// ----------------------------------------------------------------------------------------------------------------
 const coords = [
   [92, 81],
   [81, 47],
