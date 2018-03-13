@@ -45,13 +45,13 @@ function compare() {
     document.getElementById("response").innerHTML = "You win! You chose " + choiceKind[choice] + ", but the bot chose " + choiceKind[botChoiceKind];
     //win scenario
   } else if (choice == 1 && botChoiceKind == 2) {
-    document.getElementById("response").innerHTML = "You win! You chose " + choiceKind[choice] + ", but the bot chose " + choiceKind[botChoiceKind];
+    document.getElementById("response").innerHTML = "You lose! You chose " + choiceKind[choice] + ", but the bot chose " + choiceKind[botChoiceKind];
     //lose scenario
   } else if (choice == 2 && botChoiceKind == 3) {
-    document.getElementById("response").innerHTML = "You win! You chose " + choiceKind[choice] + ", but the bot chose " + choiceKind[botChoiceKind];
+    document.getElementById("response").innerHTML = "You lose! You chose " + choiceKind[choice] + ", but the bot chose " + choiceKind[botChoiceKind];
     //lose scenario
   } else if (choice == 3 && botChoiceKind == 1) {
-    document.getElementById("response").innerHTML = "You win! You chose " + choiceKind[choice] + ", but the bot chose " + choiceKind[botChoiceKind];
+    document.getElementById("response").innerHTML = "You lose! You chose " + choiceKind[choice] + ", but the bot chose " + choiceKind[botChoiceKind];
     //lose scenario
   }
 }
