@@ -1,4 +1,5 @@
 document.getElementById('plaatjeTie').style = "display: none;"
+document.getElementById('btn').style = "display: none;"
 var choice;
 var botChoiceKind;
 var choiceKind = [1,2,3];
@@ -43,7 +44,7 @@ function compare() {
 
 
   if (choice == botChoiceKind) {
-    document.getElementById("response").innerHTML = "It's a tie! You chose " + choiceKind[choice] + ", but the bot chose " + choiceKind[botChoiceKind];
+    document.getElementById("response").innerHTML = "It's a tie! You and the bot both chose  " + choiceKind[choice];
     //tie scenario, You choose the same
   } else if (choice == 1 && botChoiceKind == 3) {
     document.getElementById("response").innerHTML = "You win! You chose " + choiceKind[choice] + ", but the bot chose " + choiceKind[botChoiceKind];
@@ -72,9 +73,11 @@ function compare() {
   }
 
   if (s !== document.getElementById('plaatjePaper').style && s !== document.getElementById('plaatjeScissors').style && s !== document.getElementById('plaatjeRock').style) {
+    // document.getElementById('plaatjeTie').style = "display: block;"
     document.getElementById('plaatjeTie').style = "display: block;"
   } else {
     s.opacity = 1;
     (function fade(){(s.opacity-=.1)<0?s.display="none":setTimeout(fade,40)})();
   }
+  document.getElementById('btn').style = "display: block;"
 }

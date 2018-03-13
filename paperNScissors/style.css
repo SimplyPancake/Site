@@ -1,0 +1,34 @@
+.btn {
+  background: #03D6F2;
+  background-image: -webkit-linear-gradient(top, #03D6F2, #03C2F2);
+  background-image: -moz-linear-gradient(top, #03D6F2, #03C2F2);
+  background-image: -ms-linear-gradient(top, #03D6F2, #03C2F2);
+  background-image: -o-linear-gradient(top, #03D6F2, #03C2F2);
+  background-image: linear-gradient(to bottom, #03D6F2, #03C2F2);
+  -webkit-border-radius: 7;
+  -moz-border-radius: 7;
+  border-radius: 7px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 10px 30px 10px 30px;
+  border: solid #87E8F2 1px;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: #03D6F2;
+  background-image: -webkit-linear-gradient(top, #03D6F2, #03B3F2);
+  background-image: -moz-linear-gradient(top, #03D6F2, #03B3F2);
+  background-image: -ms-linear-gradient(top, #03D6F2, #03B3F2);
+  background-image: -o-linear-gradient(top, #03D6F2, #03B3F2);
+  background-image: linear-gradient(to bottom, #03D6F2, #03B3F2);
+  text-decoration: none;
+}
+
+.plaatje:hover{
+  cursor: pointer;
+}
+body {
+    background-color: #03E8F2;
+}
