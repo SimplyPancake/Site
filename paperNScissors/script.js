@@ -1,3 +1,4 @@
+document.getElementById('plaatjeTie').style = "display: none;"
 var choice;
 var botChoiceKind;
 var choiceKind = [1,2,3];
@@ -32,26 +33,48 @@ function botChoose() {
 }
 
 function compare() {
+  // document.getElementById('plaatjeRock').style = "display: none;"
+  // document.getElementById('plaatjePaper').style = "display: none;"
+  // document.getElementById('plaatjeScissors').style = "display: none;"
+
+  // var s = document.getElementById('plaatjeRock').style;
+  // s.opacity = 1;
+  // (function fade(){(s.opacity-=.1)<0?s.display="none":setTimeout(fade,40)})();
+
+
   if (choice == botChoiceKind) {
     document.getElementById("response").innerHTML = "It's a tie! You chose " + choiceKind[choice] + ", but the bot chose " + choiceKind[botChoiceKind];
-    //tie scenario
+    //tie scenario, You choose the same
   } else if (choice == 1 && botChoiceKind == 3) {
     document.getElementById("response").innerHTML = "You win! You chose " + choiceKind[choice] + ", but the bot chose " + choiceKind[botChoiceKind];
-    //win scenario
+    //win scenario, you choose Rock, but bot chooses scissors
+    var s = document.getElementById('plaatjePaper').style;
   } else if (choice == 2 && botChoiceKind == 1) {
     document.getElementById("response").innerHTML = "You win! You chose " + choiceKind[choice] + ", but the bot chose " + choiceKind[botChoiceKind];
-    //win scenario
+    //win scenario, you choose paper, but bot chose rock
+    var s = document.getElementById('plaatjeScissors').style;
   } else if (choice == 3 && botChoiceKind == 2) {
     document.getElementById("response").innerHTML = "You win! You chose " + choiceKind[choice] + ", but the bot chose " + choiceKind[botChoiceKind];
-    //win scenario
+    //win scenario, you choose scissors, but bot chose paper
+    var s = document.getElementById('plaatjeRock').style;
   } else if (choice == 1 && botChoiceKind == 2) {
     document.getElementById("response").innerHTML = "You lose! You chose " + choiceKind[choice] + ", but the bot chose " + choiceKind[botChoiceKind];
-    //lose scenario
+    //lose scenario, you chose rock but bot chose paper
+    var s = document.getElementById('plaatjeScissors').style;
   } else if (choice == 2 && botChoiceKind == 3) {
     document.getElementById("response").innerHTML = "You lose! You chose " + choiceKind[choice] + ", but the bot chose " + choiceKind[botChoiceKind];
-    //lose scenario
+    //lose scenario, you chose paper, but bot chose scissors
+    var s = document.getElementById('plaatjeRock').style;
   } else if (choice == 3 && botChoiceKind == 1) {
     document.getElementById("response").innerHTML = "You lose! You chose " + choiceKind[choice] + ", but the bot chose " + choiceKind[botChoiceKind];
-    //lose scenario
+    //lose scenario, you chose scissors, but bot chose rock
+    var s = document.getElementById('plaatjePaper').style;
+  }
+
+  if (s !== document.getElementById('plaatjePaper').style && s !== document.getElementById('plaatjeScissors').style && s !== document.getElementById('plaatjeRock').style) {
+    document.getElementById('plaatjeTie').style = "display: block;"
+  } else {
+    s.opacity = 1;
+    (function fade(){(s.opacity-=.1)<0?s.display="none":setTimeout(fade,40)})();
   }
 }
