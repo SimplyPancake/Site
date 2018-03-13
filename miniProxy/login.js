@@ -1,7 +1,6 @@
-var gebruikersnamen = ["Danian", "root"];
+var gebruikersnamen = ["root"];
 var wachtwoorden = [];
-wachtwoorden["root"] = " ,."
-wachtwoorden["Danian"] = "22"
+wachtwoorden["root"] = "root"
 
 var attempts = 3; // Variable to count number of attempts.
 // Below function Executes on click of login button.
