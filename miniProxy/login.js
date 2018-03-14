@@ -4,7 +4,6 @@ wachtwoorden["root"] = "root";
 wachtwoorden["Deriz"] = "Deriz";
 wachtwoorden["Naomi"] = "Kweekel1"
 
-var attempts = 3; // Variable to count number of attempts.
 // Below function Executes on click of login button.
 function validate(){
   var username = document.getElementById("username").value;
