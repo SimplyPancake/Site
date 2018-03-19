@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<script src="globalLuxuryRaffles.js"></script>
+<h1>The main function:(no CSS)</h1>
+<h1 id="textVisualization"></h1>
+<script>
+var foo = new Array(59);//create a 45 element array
+
+for(var i=0;i<foo.length;i++){
+  // document.write('Item: ' + (i+1) + ' of ' + foo.length + '<br/>');
+  // document.write(
+  //   (i+1) + ' '
+  // );
+  document.write("<p onclick='clickText(" + (i+1) + ")' style='cursor: pointer;'>" + (i+1) + '</p>');
+}
+
+function clickText(numberName){
+  console.log(numberName);
+  document.getElementById("textVisualization").innerHTML = "Number clicked: " + numberName;
+}
+
+</script>
+</html>
