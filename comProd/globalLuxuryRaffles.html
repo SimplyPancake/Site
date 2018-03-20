@@ -10,14 +10,15 @@ var foo = new Array(watchesAmount);//create a 45 element array
 
 for(var i=0;i<foo.length;i++){
   var tekst = document.getElementById('textHere').innerHTML;
-  var tekstWrite = "<a class='numberSelect'  onclick='clickText(" + (i+1) + ")' style='cursor: pointer;'>" + (i+1) + ' ' + '</a>';
+  var tekstWrite = "<a class='numberSelect'  id='nummer" + (i+1) + "' onclick='clickText(" + (i+1) + ")' style='cursor: pointer;'>" + (i+1) + ' ' + '</a>';
   var tekstGonnaWrite = tekst + tekstWrite;
   document.getElementById('textHere').innerHTML = tekstGonnaWrite;
 }
 
 function clickText(numberName){
   console.log(numberName);
-  document.getElementById("textVisualization").innerHTML = "Number clicked: " + numberName;
+  document.getElementById("textVisualization").innerHTML = "Last number clicked: " + numberName;
+  document.getElementById("nummer" +  numberName).style = "display: none;"
 }
 </script>
 <style>
