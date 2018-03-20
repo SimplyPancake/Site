@@ -6,9 +6,10 @@
 
 <script>
 var watchesAmount = 59
-var foo = new Array(watchesAmount);//create a 45 element array
+var foo = new Array(watchesAmount);//create a 59 element array
 
 for(var i=0;i<foo.length;i++){
+  // foo[i+1] = "show"
   var tekst = document.getElementById('textHere').innerHTML;
   var tekstWrite = "<a class='numberSelect'  id='nummer" + (i+1) + "' onclick='clickText(" + (i+1) + ")' style='cursor: pointer;'>" + (i+1) + ' ' + '</a>';
   var tekstGonnaWrite = tekst + tekstWrite;
@@ -32,6 +33,12 @@ h1, a {
 
 .numberSelect{
   word-spacing: 3px;
+  user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
 }
+
 </style>
 </html>
