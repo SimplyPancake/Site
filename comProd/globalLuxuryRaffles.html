@@ -10,7 +10,7 @@ var foo = new Array(59);//create a 45 element array
 
 for(var i=0;i<foo.length;i++){
   var tekst = document.getElementById('textHere').innerHTML;
-  var tekstWrite = "<a class='numberSelect'  onclick='clickText(" + (i+1) + ")' style='cursor: pointer;'>" + (i+1) + '</a>';
+  var tekstWrite = "<a class='numberSelect'  onclick='clickText(" + (i+1) + ")' style='cursor: pointer;'>" + (i+1) + ' ' + '</a>';
   var tekstGonnaWrite = tekst + tekstWrite;
   document.getElementById('textHere').innerHTML = tekstGonnaWrite;
 }
@@ -28,5 +28,11 @@ body {
 h1, a {
   color: white;
 }
+
+.numberSelect{
+  word-spacing: 3px;
+}
+
+
 </style>
 </html>
