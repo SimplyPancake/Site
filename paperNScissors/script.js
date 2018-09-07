@@ -80,4 +80,7 @@ function compare() {
     (function fade(){(s.opacity-=.1)<0?s.display="none":setTimeout(fade,40)})();
   }
   document.getElementById('btn').style = "display: block;"
+  document.getElementById('plaatjePaper').onclick = "";
+  document.getElementById('plaatjeRock').onclick = "";
+  document.getElementById('plaatjeScissors').onclick = "";
 }
